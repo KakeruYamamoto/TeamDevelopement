@@ -26,6 +26,10 @@ class AgendasController < ApplicationController
     if current_user.agendas || current_user.team.agendas
       @agenda.destroy
       redirect_to dashboard_url, notice: I18n.t('views.messages.destroy_agenda')
+      @agenda.team.members.each do |agenda|
+
+        DestroyMailer.destroy_mail(agenda.email,@agenda.title).deliver
+      end
     else
       redirect_to dashboard_url, notice: I18n.t('views.messages.don`t destroy_agenda')
     end
