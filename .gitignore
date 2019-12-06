@@ -34,4 +34,7 @@
 /node_modules
 yarn-debug.log*
 .yarn-integrity
+<<<<<<< HEAD
 /public/uploads
+=======
+>>>>>>> origin/master

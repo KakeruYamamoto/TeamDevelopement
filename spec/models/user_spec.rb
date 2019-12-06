@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+<<<<<<< HEAD
   describe 'パスワードとしてランダムな20文字の16進数文字列を生成する。' do
     it '生成されたユーザーのパスワードを文字列として返すこと' do
       expect(User.generate_password.class).to eq String
@@ -24,4 +25,7 @@ RSpec.describe User, type: :model do
       expect(not_created_user.encrypted_password.present?).to eq true
     end
   end
+=======
+  pending "add some examples to (or delete) #{__FILE__}"
+>>>>>>> origin/master
 end
