@@ -35,6 +35,10 @@
 yarn-debug.log*
 .yarn-integrity
 <<<<<<< HEAD
+<<<<<<< HEAD
 /public/uploads
 =======
 >>>>>>> origin/master
+=======
+/public/uploads
+>>>>>>> 27668aa57917ea7499d7b6ebb117280147bc0489

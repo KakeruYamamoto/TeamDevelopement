@@ -37,10 +37,14 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
 <<<<<<< HEAD
+<<<<<<< HEAD
   config.action_mailer.delivery_method = :letter_opener_web
 =======
   config.action_mailer.delivery_method = :letter_opener
 >>>>>>> origin/master
+=======
+  config.action_mailer.delivery_method = :letter_opener_web
+>>>>>>> 27668aa57917ea7499d7b6ebb117280147bc0489
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

@@ -2,6 +2,7 @@ class Agenda < ApplicationRecord
   belongs_to :team
   belongs_to :user
   has_many :articles, dependent: :destroy
+<<<<<<< HEAD
 
   # after_destroy :after_destroy_mails
   # 
@@ -10,4 +11,6 @@ class Agenda < ApplicationRecord
   #                               current_user.agendas.team.users).deliver
   # end
 
+=======
+>>>>>>> 27668aa57917ea7499d7b6ebb117280147bc0489
 end

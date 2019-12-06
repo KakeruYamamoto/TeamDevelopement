@@ -10,11 +10,8 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-<<<<<<< HEAD
+
 //= require activestorage
 //= require jquery/dist/jquery.js
-=======
-//= require rails-ujs
-//= require activestorage
->>>>>>> origin/master
+
 //= require_tree .
