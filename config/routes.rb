@@ -8,11 +8,6 @@ Rails.application.routes.draw do
     passwords: 'users/passwords'
   }
   resource :user
-<<<<<<< HEAD
-
-=======
-  
->>>>>>> 27668aa57917ea7499d7b6ebb117280147bc0489
   resources :teams do
     resources :assigns, only: %w(create destroy)
     resources :agendas, shallow: true do
