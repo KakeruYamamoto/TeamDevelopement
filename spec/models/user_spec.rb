@@ -24,4 +24,5 @@ RSpec.describe User, type: :model do
       expect(not_created_user.encrypted_password.present?).to eq true
     end
   end
+
 end

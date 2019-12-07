@@ -37,7 +37,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'database_cleaner'
   gem 'factory_bot_rails'
-  gem 'faker'
+  gem 'faker','1.8.7'
   gem 'guard-rspec'
   gem 'pry-byebug'
   gem 'pry-rails'
