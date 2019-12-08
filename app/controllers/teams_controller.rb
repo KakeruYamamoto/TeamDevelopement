@@ -49,7 +49,11 @@ class TeamsController < ApplicationController
 
   def changeowner
     if @team.update(team_params2)
+      # binding.pry
+      ChangeOwnerMailer.change_owner_mail( @team.owner.email).deliver
       redirect_to team_url, notice: 'リーダー権限を移動しました！'
+      binding.pry
+      # ChangeOwnerMailer.change_owner_mail(@team, password).deliver
     else
       redirect_to team_url, notice: 'リーダー権限の移動に失敗しました、、'
     end
