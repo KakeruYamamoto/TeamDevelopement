@@ -1,0 +1,2 @@
+class ChangeOwnerMailer < ApplicationMailer
+end
