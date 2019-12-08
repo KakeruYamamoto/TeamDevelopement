@@ -51,7 +51,6 @@ class TeamsController < ApplicationController
 
     if @team.update(team_params2)
       redirect_to team_url, notice: 'リーダー権限を移動しました！'
-      # binding.pry
     else
       redirect_to team_url, notice: 'リーダー権限の移動に失敗しました、、'
     end
@@ -62,7 +61,6 @@ class TeamsController < ApplicationController
 
   def set_team
     @team = Team.friendly.find(params[:id])
-    # binding.pry
   end
 
   def team_params
