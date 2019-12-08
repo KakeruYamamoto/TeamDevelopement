@@ -1,7 +1,7 @@
 class TeamsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_team, only: %i[show edit update destroy changeowner]
-
+  before_action :edit_team, only: %i[edit]
   def index
     @teams = Team.all
   end
@@ -69,6 +69,12 @@ class TeamsController < ApplicationController
 
   def team_params2
      params.fetch(:team, {}).permit %i[owner_id]
+  end
+
+  def edit_team
+    if current_user.id == @team.owner.id || current_user.id == @team.user.id
+      redirect_to team_url, notice: '他のユーザは編集できません'
+    end
   end
 
 end
