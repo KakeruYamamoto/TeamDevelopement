@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resource :user
 
   resources :teams do
-    member do 
+    member do
       patch :changeowner
     end
     resources :assigns, only: %w(create destroy)

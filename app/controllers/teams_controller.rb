@@ -1,6 +1,6 @@
 class TeamsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_team, only: %i[show edit update destroy]
+  before_action :set_team, only: %i[show edit update destroy changeowner]
 
   def index
     @teams = Team.all
@@ -48,8 +48,10 @@ class TeamsController < ApplicationController
   end
 
   def changeowner
+
     if @team.update(team_params2)
       redirect_to team_url, notice: 'リーダー権限を移動しました！'
+      # binding.pry
     else
       redirect_to team_url, notice: 'リーダー権限の移動に失敗しました、、'
     end
@@ -60,6 +62,7 @@ class TeamsController < ApplicationController
 
   def set_team
     @team = Team.friendly.find(params[:id])
+    # binding.pry
   end
 
   def team_params
