@@ -48,7 +48,6 @@ class TeamsController < ApplicationController
   end
 
   def changeowner
-    # @assign = Assign.find(params[:assign])
     if @team.update(team_params2)
       redirect_to team_url, notice: 'リーダー権限を移動しました！'
     else
