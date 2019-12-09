@@ -72,8 +72,8 @@ class TeamsController < ApplicationController
   end
 
   def edit_team
-    if current_user.id == @team.owner.id || current_user.id == @team.user.id
-      redirect_to team_url, notice: '他のユーザは編集できません'
+    if current_user.id != @team.owner.id
+      redirect_to team_url, notice: 'チームリーダー以外は編集できません'
     end
   end
 
